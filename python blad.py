@@ -1,3 +1,4 @@
+# import cv2
 # def compress_string(input_string):
 #     if not input_string:
 #         return ""
@@ -18,10 +19,18 @@
 #
 #     return "".join(compressed)
 #
+# def comp_img(path):
+#     img = cv2.imread(path)
 #
-# input_text = input()
-# output = compress_string(input_text)
-# print(output)
+#     pixel_data = img.flatten()
+#
+#     compressed = compress_string(pixel_data)
+#
+#     return compressed
+#
+# img_lol = r"C:\Users\basel.abdella\Desktop\lol"
+# final = comp_img(img_lol)
+
 
 
 # def compress_str(input_str):
@@ -48,64 +57,33 @@
 
 
 
+
+
+
+
+
+# def re_decode(data):
+#     decoded=""
+#     count=""
 #
-# import re
+#     for char in data:
+#         if char.isdigit():
+#             count += char
+#         else:
+#             decoded += char * int(count)
+#             count=""
 #
 #
-# def decompress_string(compressed_string):
-#     matches = re.findall(r'(\d+)([A-Za-z])', compressed_string)
-#     decompressed = []
-#
-#     for count, char in matches:
-#         decompressed.append(char * int(count))
-#
-#     return "".join(decompressed)
-#
+#     return decoded
 #
 #
 # compressed_text = input()
-# output = decompress_string(compressed_text)
+# output = re_decode(compressed_text)
 # print(output)
-
-
-# import re
-#
-#
-# def decompress_string(compressed_string):
-#     matches = re.findall(r'(\d+)([A-Za-z])', compressed_string)
-#     decompressed = []
-#
-#     for count, char in matches:
-#         decompressed.append(char * int(count))
-#
-#     return "".join(decompressed)
 #
 #
 #
-# compressed_text = input()
-# output = decompress_string(compressed_text)
-# print(output)
-
-def re_decode(data):
-    decoded=""
-    count=""
-
-    for char in data:
-        if char.isdigit():
-            count += char
-        else:
-            decoded += char * int(count)
-            count=""
-
-
-    return decoded
-
-
-compressed_text = input()
-output = re_decode(compressed_text)
-print(output)
-
-
+#
 
 
 
